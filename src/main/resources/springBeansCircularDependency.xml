@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!--<bean id="aBean" class="com.prowings.circulardependency.A">
+	 <constructor-arg name ="b"> 
+		<ref bean="bBean" />
+		 </constructor-arg> 
+		</bean>
+		
+		 <bean id="bBean" class="com.prowings.circulardependency.B"> 
+		 <constructor-arg name="a"> 
+		 <ref bean="aBean" /> 
+		</constructor-arg> 
+		</bean -->
+
+	<bean id="aaBean" class="com.prowings.circulardependency.A">
+		<property name="b">
+			<ref bean="bbBean" />
+		</property>
+	</bean>
+
+	<bean id="bbBean" class="com.prowings.circulardependency.B">
+		<property name="a">
+			<ref bean="aaBean" />
+		</property>
+
+
+	</bean>
+
+
+</beans>

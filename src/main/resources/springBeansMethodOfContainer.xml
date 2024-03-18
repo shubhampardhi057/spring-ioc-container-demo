@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ <bean  id = "emp1" class="com.prowings.methodsofcontainer.Employee" autowire="byName">
+ <property name="empId" value="101"></property>
+ <property name="name" value="Ram"></property>
+ </bean>
+ 
+ <bean  id = "emp2" class="com.prowings.methodsofcontainer.Employee" autowire="byName">
+ <property name="empId" value="102"></property>
+ <property name="name" value="Sham"></property>
+ </bean>
+ 
+ <bean  id = "emp3" class="com.prowings.methodsofcontainer.Employee" autowire="byName">
+ <property name="empId" value="102"></property>
+ <property name="name" value="Sham"></property>
+ </bean>
+ 
+ 
+ <bean id="address" class="com.prowings.methodsofcontainer.Address"> 
+ <property name="pin" value="1234"></property>
+ <property name="city" value="Pune"></property>
+ </bean>
+ 
+<!--  <bean id="addres1" class="com.prowings.methodsofcontainer.Address"> 
+ <property name="pin" value="4890"></property>
+ <property name="city" value="Mumbai"></property>
+ </bean> -->
+ 
+ 
+
+ 
+ </beans>
